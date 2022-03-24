@@ -40,11 +40,12 @@ export const config: WebdriverIOConfig = {
     },
 
     specs: [
-        //Jasmine with Serenity
-        ["./test/specs/jasmine-serenity.spec.ts"],
+        //Example working
+        ["./test/specs/working.spec.ts"],
 
-        // Plain Jasmine (No Serenity)
-        ["./test/specs/only-jasmine.spec.ts"],
+        //Example failing
+        ["./test/specs/failing.spec.ts"],
+
     ],
 
     maxInstances: 1,
@@ -99,9 +100,9 @@ export const config: WebdriverIOConfig = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: [
-        ["selenium-standalone", { drivers: { chrome: "98.0.4758.102" } }],
-    ],
+    // services: [
+    //     ["selenium-standalone", { drivers: { chrome: "98.0.4758.102" } }],
+    // ],
 
     // Native WebdriverIO reporter for stdout.
     // The only one supported by default is 'dot'
